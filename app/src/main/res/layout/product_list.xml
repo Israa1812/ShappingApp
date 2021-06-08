@@ -1,0 +1,68 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="40dp"
+    android:layout_marginEnd="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageProductId"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/realmadrid_m" />
+
+    <TextView
+        android:id="@+id/nameId"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="Name"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/priceId"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:textColor="#8E8989"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Price" />
+    <TextView
+        android:id="@+id/desid"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:textColor="#8E8989"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="" />
+
+
+
+
+    <com.iarcuschin.simpleratingbar.SimpleRatingBar
+        android:id="@+id/ratingBarID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:srb_starSize="20dp"
+        app:srb_numberOfStars="5"
+        app:srb_rating="3"
+        android:layout_gravity="center"
+        app:srb_isIndicator="true"
+        app:srb_stepSize="1"
+        app:srb_fillColor="#ECCE07"
+        android:layout_alignBottom="@+id/spacecraftImage"
+        android:layout_alignParentRight="true"/>
+
+</LinearLayout>
