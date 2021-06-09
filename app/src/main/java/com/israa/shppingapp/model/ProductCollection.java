@@ -52,10 +52,6 @@ public class ProductCollection {
         product.setImageUrls(R.drawable.goalkeeper_jersey);
         products.add(product);
 
-
-
-
-
         return products;
     }
 

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.israa.shppingapp.R;
 import com.israa.shppingapp.controller.RecyclerAdapter;
+import com.israa.shppingapp.model.Product;
 import com.israa.shppingapp.model.ProductCollection;
 
 public class HomeActivity extends AppCompatActivity {
@@ -18,12 +19,9 @@ public class HomeActivity extends AppCompatActivity {
     private RecyclerView  productRecyclerView;
     private ImageView basket;
 
-    private RecyclerAdapter adapter;
+    Product product;
 
 
-  /*  private ProductListAdapter productListAdapter;
-    private List<Product> productList;
-   */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +31,20 @@ public class HomeActivity extends AppCompatActivity {
         productRecyclerView = findViewById(R.id.productRecyclerViewId);
         basket = findViewById(R.id.imageView2);
 
+
+
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
         productRecyclerView.setLayoutManager(layoutManager);
         //adapter = new RecyclerAdapter(products, this);
         productRecyclerView.setAdapter(new RecyclerAdapter(ProductCollection.getSpaceships(),this));
 
 
+        product = new Product();
 
         basket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(HomeActivity.this, BasketActivity.class);
                 startActivity(i);
             }
@@ -50,8 +52,5 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
-
-
-
 
 }

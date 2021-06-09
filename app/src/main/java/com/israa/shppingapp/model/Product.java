@@ -11,8 +11,6 @@ public class Product {
     public Product() {
     }
 
-
-
     public int getRating() {
         return rating;
     }

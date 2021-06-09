@@ -17,10 +17,10 @@ import com.israa.shppingapp.R;
 
 public class BasketActivity extends AppCompatActivity {
 
-
     private Button checkout;
-    private TextView mName, mPrice;
+    private TextView mName, mPrice, mTotal;
     private ImageView imageView;
+    private float tax, val;
 
     SharedPreferences sharedPreferences;
     private static final String SHARE="MYpref";
@@ -38,19 +38,27 @@ public class BasketActivity extends AppCompatActivity {
 
         checkout = findViewById(R.id.delete_all);
         mName = findViewById(R.id.namepro);
-        mPrice = findViewById(R.id.priceid);
+        mPrice = findViewById(R.id.price);
         imageView = findViewById(R.id.imageProductId);
+        mTotal = findViewById(R.id.total);
 
 
         sharedPreferences = getSharedPreferences(SHARE, Context.MODE_PRIVATE);
 
         String name = sharedPreferences.getString(keyname,null);
-        String price = sharedPreferences.getString(keyprice,null);
+        float price = sharedPreferences.getFloat(keyprice,0);
         int image = sharedPreferences.getInt(keyImage,0);
-        mName.setText(name);
-        mPrice.setText(price);
-        imageView.setImageResource(image);
 
+
+        //calc tax
+        val = (float) (price * (0.17));
+        tax = val + price;
+
+
+        mName.setText(name);
+        mPrice.setText(price +" €");
+        imageView.setImageResource(image);
+        mTotal.setText(tax + " €");
 
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,11 +67,12 @@ public class BasketActivity extends AppCompatActivity {
                 editor.clear();
                 editor.commit();
                 finish();
-                Intent intent = new Intent(BasketActivity.this, CheckOutActivity.class);
+                Intent intent = new Intent(BasketActivity.this, ProfileActivity.class);
                 startActivity(intent);
 
             }
         });
+
 
     }
 }

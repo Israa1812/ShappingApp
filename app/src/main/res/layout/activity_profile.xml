@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.CheckOutActivity">
+    android:layout_height="match_parent"
+    tools:context=".view.ProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,95 +17,104 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Invoice"
-                android:textSize="23dp"
+                android:text="Your contact details."
+                android:textSize="18dp"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="122dp"
                 tools:layout_editor_absoluteY="54dp" />
 
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="289dp"
-                android:layout_height="174dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                app:srcCompat="@drawable/ma" />
-
-
             <EditText
-                android:id="@+id/cardnumberId"
+                android:layout_marginTop="10dp"
+                android:id="@+id/Name"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="30dp"
                 android:background="@drawable/edittext"
+                android:paddingStart="10dp"
                 android:ems="10"
-                android:hint="Card Number"
-                android:inputType="phone"
-                android:paddingStart="10dp" />
-
+                android:hint="First name"
+                android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/nameOnCardId"
+                android:layout_marginTop="10dp"
+                android:id="@+id/LastName"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edittext"
+                android:paddingStart="10dp"
                 android:ems="10"
-                android:hint="Name On Card"
-                android:inputType="textPersonName"
-                android:paddingStart="10dp" />
+                android:hint="Last name"
+                android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/mail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edittext"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textWebEmailAddress" />
 
             <EditText
-                android:id="@+id/expiryMonthId"
-                android:layout_width="wrap_content"
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edittext"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Expiry Month"
-                android:inputType="phone"
-                android:paddingStart="10dp" />
+                android:hint="Phone Number"
+                android:inputType="number" />
 
             <EditText
-                android:id="@+id/expiryYearId"
-                android:layout_width="wrap_content"
+                android:id="@+id/address"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edittext"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Expiry Year"
-                android:inputType="number|phone"
-                android:paddingStart="10dp" />
+                android:hint="Address"
+                android:inputType="text" />
+
 
             <EditText
-                android:id="@+id/cvvId"
-                android:layout_width="wrap_content"
+                android:id="@+id/post"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edittext"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="CVV"
-                android:inputType="date|phone"
-                android:paddingStart="10dp" />
+                android:hint="Post Number"
+                android:inputType="phone" />
 
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edittext"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="City"
+                android:inputType="text" />
 
 
 
             <Button
-                android:id="@+id/payid"
+                android:id="@+id/next"
                 android:layout_width="124dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bt_background"
-                android:text="Pay"
+                android:text="Next"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="14dp" />
@@ -113,6 +122,5 @@
 
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>

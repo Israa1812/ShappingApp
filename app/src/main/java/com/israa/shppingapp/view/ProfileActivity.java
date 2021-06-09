@@ -9,22 +9,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.israa.shppingapp.R;
 
-public class CheckOutActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
-    Button payid;
+    Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_out);
+        setContentView(R.layout.activity_profile);
 
+        next = findViewById(R.id.next);
 
-        payid = findViewById(R.id.payid);
-
-
-        payid.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CheckOutActivity.this, LastActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, CheckOutActivity.class);
                 startActivity(intent);
                 finish();
             }

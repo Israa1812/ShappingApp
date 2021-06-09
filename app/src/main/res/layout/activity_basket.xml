@@ -8,7 +8,6 @@
     tools:context=".view.BasketActivity">
 
 
-
     <TextView
         android:id="@+id/namepro"
         android:layout_alignParentTop="true"
@@ -16,6 +15,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:paddingTop="16sp"
         android:text="Name"
@@ -26,11 +26,69 @@
         android:layout_height="wrap_content"
         android:paddingTop="7sp"
         android:layout_alignTop="@+id/namepro"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="15dp"
-        android:text="Price"
+        android:textColor="@color/black"
+        android:text="Price ex. tax"
         android:textSize="20sp" />
 
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="7sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:text="20"
+        android:layout_below="@+id/priceid"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:text="VAT "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/taxid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tax"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:paddingTop="7sp"
+        android:text="0.17 "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/div"
+        android:layout_alignParentStart="true"
+        android:text="Total: "
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/vat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/total"
+        android:layout_alignParentStart="true"
+        android:text="[Including VAT 17%] "
+        android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/imageProductId"
@@ -45,7 +103,11 @@
         tools:srcCompat="@tools:sample/avatars"
         android:layout_marginBottom="15dp" />
 
-
+    <View
+        style="@style/Divider"
+        android:id="@+id/div"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/taxid" />
 
     <Button
         android:id="@+id/delete_all"

@@ -43,7 +43,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyHold
         holder.name.setText(product.getName());
         holder.imageView.setImageResource(product.getImageUrls());
         holder.ratingBar.setRating(product.getRating());
-        holder.price.setText(product.getPrice());
+        holder.price.setText(product.getPrice() +" €");
         holder.ratingBar.setRating(product.getRating());
         holder.dec.setText(product.getDescription());
 
@@ -67,7 +67,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyHold
         return products.size();
     }
 
-
     /*
     VIEW HOLDER CLASS
      */
@@ -81,8 +80,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyHold
 
         public MyHolder(View itemView) {
             super(itemView);
-
-
 
             name = itemView.findViewById(R.id.nameId);
             dec = itemView.findViewById(R.id.desid);
